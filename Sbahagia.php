@@ -47,27 +47,26 @@
             <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="tambahDataLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                    <!-- Kita membuat form dengan method post untuk memanggil file store.php-->
+                    <!-- Kita membuat form dengan method post untuk memanggil file -->
                     <form method = "POST" action ="form.php" name ="form">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Lengkapi Data</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- Input Nama -->
+                            <!-- Input  -->
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
                                 <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama" required>
                             </div>
-                            <!-- Input NIM -->
+                            
                             <div class="mb-3">
-                                <label for="NIM" class="form-label">No.KTP</label>
-                                <input type="text" class="form-control" id="NIM" placeholder="Masukkan Nomor KTP" name="nim" required>
+                                <label for="no.KTP" class="form-label">No.KTP</label>
+                                <input type="text" class="form-control" id="no.KTP" placeholder="Masukkan Nomor KTP" name="no.KTP" required>
                             </div>
                             <div class="mb-3">
-                                <label for="Alamat" class="form-label">No.Telp</label>
-                                <!--kita akan coba menggunakan textarea sebagai input alamat-->
-                                <textarea class="form-control" id="Alamat" placeholder="Masukkan Nomor Telp" name="alamat" required></textarea>
+                                <label for="no.Telp" class="form-label">No.Telp</label>
+                                <textarea class="form-control" id="no.Telp" placeholder="Masukkan Nomor Telp" name="no.Telp" required></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">                        
@@ -107,9 +106,11 @@
                     ?>
                     <tr>
                         <td><?php echo $no++; ?></td>
-                        <td><?php echo $data['Nama']; ?></td>
-                        <td><?php echo $data['NO.KTP']; ?></td>
-                        <td><?php echo $data['NO.Telp']; ?></td>
+                        <td><?php echo $data['nama']; ?></td>
+                        <td><?php echo $data['no.KTP']; ?></td>
+                        <td><?php echo $data['no.Telp']; ?></td>
+                        <td><?php echo $data['tahun_masuk']; ?></td>
+                        <td><?php echo $data['jumlah_masa_kerja']; ?></td>
                         <td>
                             <a href ="detail.php?id=<?php echo $data['id']; ?>" class= "btn btn-success btn-sm text-white">Detail</a>
                             <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>

@@ -38,9 +38,9 @@
     <!--End Navbar-->
 
     <?php
-    //Memanggil file config.php
+    //Memanggil file Dt.php
     include 'Dt.php';
-    //Menangkap id yang dikirim melalui button detail di index.php
+    //Menangkap id yang dikirim melalui button detail
     $id = $_GET['id'];
     //Melakukan query untuk mendapatkan data mahasiswa berdasarkan $id
     $sawitb = mysqli_query($koneksi, "select * from sawitb where id='$id'");
@@ -51,26 +51,26 @@
             <p><a href="Sbahagia.php">Home</a>/Detail /<?php echo $data['nama'] ?></p>
             <div class="card">
                 <div class="card-header">
-                    <p class="fw-bold">Profil Mahasiswa</p>
+                    <p class="fw-bold">Profil</p>
                 </div>
                 <div class="card-body fw-bold">
                     <!-- Kita membuat form dengan memanggil file store.php-->
-                    <form method = "POST" action ="update.php">
+                    <form method = "POST" action ="UP.php">
                         <!-- Kita membuat input disembunyikan (hidden) untuk menyimpan id mahasiswa -->
                         <div class="mb-3">
                             <input type="hidden" class="form-control" nama="id" values="<?php echo $data['id']; ?>">
                         </div>
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Mahasiswa" name="nama" values="<?php echo $data['nama']; ?>" >
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama" values="<?php echo $data['nama']; ?>" >
                         </div>
                         <div class="mb-3">
-                            <label for="NIM" class="form-label">NIM</label>
-                            <input type="text" class="form-control" id="NIM" placeholder="Masukkan NIM Mahasiswa" name="nim" values="<?php echo $data['nim']; ?>" >
+                            <label for="no.KTP" class="form-label">No.KTP</label>
+                            <input type="text" class="form-control" id="no.KTP" placeholder="Masukkan Nomor KTP" name="no.KTP" values="<?php echo $data['no.KTP']; ?>" >
                         </div>
                         <div class="mb-3">
-                            <label for="Alamat" class="form-label">Alamat</label>
-                            <input type="text" class="form-control" id="Alamat" placeholder="Masukkan Alamat Mahasiswa" name="alamat" values="<?php echo $data['alamat']; ?>" >
+                            <label for="no.Telp" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="no.Telp" placeholder="Masukkan Nomor Telp" name="no.Telp" values="<?php echo $data['no.Telp']; ?>" >
                         </div>    
                         <button types="submit" class="btn btn-primary" values="SIMPAN">Update</button>
                     </form>
