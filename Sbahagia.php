@@ -48,7 +48,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <!-- Kita membuat form dengan method post untuk memanggil file store.php-->
-                    <form method = "POST" action ="store1.php" name ="form">
+                    <form method = "POST" action ="form.php" name ="form">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Lengkapi Data</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -57,17 +57,17 @@
                             <!-- Input Nama -->
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Mahasiswa" name="nama" required>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama" required>
                             </div>
                             <!-- Input NIM -->
                             <div class="mb-3">
-                                <label for="NIM" class="form-label">NIM</label>
-                                <input type="text" class="form-control" id="NIM" placeholder="Masukkan NIM Mahasiswa" name="nim" required>
+                                <label for="NIM" class="form-label">No.KTP</label>
+                                <input type="text" class="form-control" id="NIM" placeholder="Masukkan Nomor KTP" name="nim" required>
                             </div>
                             <div class="mb-3">
-                                <label for="Alamat" class="form-label">Alamat</label>
+                                <label for="Alamat" class="form-label">No.Telp</label>
                                 <!--kita akan coba menggunakan textarea sebagai input alamat-->
-                                <textarea class="form-control" id="Alamat" placeholder="Masukkan Alamat Mahasiswa" name="alamat" required></textarea>
+                                <textarea class="form-control" id="Alamat" placeholder="Masukkan Nomor Telp" name="alamat" required></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">                        
@@ -84,8 +84,8 @@
     <!--Akhir Tampilan-->
 
     <!--tampilan tabel-->
-    <div class = "container data-mahasiswa mt-3">
-        <table class =" table table-striped" id ="tabelMahasiswa">
+    <div class = "container data-sawitb mt-3">
+        <table class =" table table-striped" id ="tabelSawitb">
             <thead>
                 <tr>
                     <th scope="col">No.</th>
@@ -100,21 +100,21 @@
             <tbody>
                 <?php
                 // Include koneksi database
-                include 'config.php';
+                include 'Dt.php';
                 $no = 1;
-                $mahasiswa = mysqli_query($koneksi, "select * from mahasiswa");
-                while($data = mysqli_fetch_array($mahasiswa)){
+                $sawitb = mysqli_query($koneksi, "select * from sawitb");
+                while($data = mysqli_fetch_array($sawitb)){
                     ?>
                     <tr>
                         <td><?php echo $no++; ?></td>
-                        <td><?php echo $data['nama']; ?></td>
-                        <td><?php echo $data['nim']; ?></td>
-                        <td><?php echo $data['alamat']; ?></td>
+                        <td><?php echo $data['Nama']; ?></td>
+                        <td><?php echo $data['NO.KTP']; ?></td>
+                        <td><?php echo $data['NO.Telp']; ?></td>
                         <td>
                             <a href ="detail.php?id=<?php echo $data['id']; ?>" class= "btn btn-success btn-sm text-white">Detail</a>
                             <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>
                             <a href="print.php?id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm text-white">Cetak</a>
-                            <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Mahasiswa Ini?')">Hapus</a>
+                            <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Ini?')">Hapus</a>
                         </td>
                     </tr>
                     <?php
@@ -125,15 +125,15 @@
     </div>
     <!--Akhir tampilan tabel-->
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tabelSawitb').DataTable();
+        } );
+    </script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
