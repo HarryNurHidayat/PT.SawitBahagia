@@ -69,9 +69,17 @@
                             <input type="text" class="form-control" id="no.KTP" placeholder="Masukkan Nomor KTP" name="no.KTP" values="<?php echo $data['no.KTP']; ?>" >
                         </div>
                         <div class="mb-3">
-                            <label for="no.Telp" class="form-label">Alamat</label>
+                            <label for="no.Telp" class="form-label">No.Telp</label>
                             <input type="text" class="form-control" id="no.Telp" placeholder="Masukkan Nomor Telp" name="no.Telp" values="<?php echo $data['no.Telp']; ?>" >
-                        </div>    
+                        </div>
+                        <div class="mb-3">
+                            <label for="tahun_masuk" class="form-label">Tahun Masuk</label>
+                            <input type="text" class="form-control" id="tahun_masuk" placeholder="Masukkan Tahun Masuk" name="tahun_masuk" values="<?php echo $data['tahun_masuk']; ?>" >
+                        </div> 
+                        <div class="mb-3">
+                            <label for="jumlah_masa_kerja" class="form-label">Masa Kerja</label>
+                            <input type="text" class="form-control" id="jumlah_masa_kerja" placeholder="Masa Kerja" name="jumlah_masa_kerja" values="<?php echo $data['jumlah_masa_kerja']; ?>" >
+                        </div> 
                         <button types="submit" class="btn btn-primary" values="SIMPAN">Update</button>
                     </form>
                 </div>

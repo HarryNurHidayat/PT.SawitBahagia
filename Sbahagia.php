@@ -64,9 +64,21 @@
                                 <label for="no.KTP" class="form-label">No.KTP</label>
                                 <input type="text" class="form-control" id="no.KTP" placeholder="Masukkan Nomor KTP" name="no.KTP" required>
                             </div>
+
                             <div class="mb-3">
                                 <label for="no.Telp" class="form-label">No.Telp</label>
-                                <textarea class="form-control" id="no.Telp" placeholder="Masukkan Nomor Telp" name="no.Telp" required></textarea>
+                                <input type="text" class="form-control" id="no.Telp" placeholder="Masukkan Nomor Telp" name="no.Telp" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tahun_masuk" class="form-label">Tahun Masuk</label>
+                                <input type="text" class="form-control" id="tahun_masuk" placeholder="Masukkan Tahun Masuk" name="tahun_masuk" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="jumlah_masa_kerja" class="form-label">Masa Kerja</label>
+                                <textarea class="form-control" id="jumlah_masa_kerja" placeholder="Masa Kerja" name="jumlah_masa_kerja" required></textarea>
+                            </div>
                             </div>
                         </div>
                         <div class="modal-footer">                        
@@ -81,6 +93,9 @@
         </div>
     </div>
     <!--Akhir Tampilan-->
+
+    <!--Style tampilan-->
+    <!--Akhir Tampilan style-->
 
     <!--tampilan tabel-->
     <div class = "container data-sawitb mt-3">

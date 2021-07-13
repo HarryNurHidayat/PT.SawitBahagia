@@ -6,9 +6,11 @@ include './Dt.php';
 $nama = $_POST['nama'];
 $KTP = $_POST['no.KTP'];
 $Telp = $_POST['no.Telp'];
+$Tahun = $_POST['tahun_masuk'];
+$Masa = $_POST['jumlah_masa_kerja'];
 
 // Menginput data ke database
-mysqli_query($koneksi, "insert into sawitb values('','$nama','$KTP','$Telp')");
+mysqli_query($koneksi, "insert into sawitb values('','$nama','$KTP','$Telp','$Tahun','$Masa')");
 
 // Mengembalikan ke halaman awal
 header("location:Sbahagia.php");
