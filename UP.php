@@ -15,4 +15,4 @@ $Masa = $_POST['jumlah_masa_kerja'];
 mysqli_query($koneksi, "update sawitb set nama='$nama', no.KTP='$KTP', no.Telp='$Telp', tahun_masuk='$Tahun', jumlah_masa_kerja='$Masa' where id='$id'");
 
 //mengalihkan halaman kembali ke index.php
-header("location:Sbahagia.php");
+include("location:Sbahagia.php");

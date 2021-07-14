@@ -128,10 +128,10 @@
                         <td><?php echo $data['tahun_masuk']; ?></td>
                         <td><?php echo $data['jumlah_masa_kerja']; ?></td>
                         <td>
-                            <a href ="detail.php?id=<?php echo $data['id']; ?>" class= "btn btn-success btn-sm text-white">Detail</a>
-                            <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>
-                            <a href="print.php?id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm text-white">Cetak</a>
-                            <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Ini?')">Hapus</a>
+                            <a href ="DE.php?id=<?php echo $data['id']; ?>" class= "btn btn-success btn-sm text-white">Detail</a>
+                            <a href="UP.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>
+                            <a href="Pr.php?id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm text-white">Cetak</a>
+                            <a href="Dl.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Ini?')">Hapus</a>
                         </td>
                     </tr>
                     <?php
