@@ -129,7 +129,7 @@
                         <td><?php echo $data['jumlah_masa_kerja']; ?></td>
                         <td>
                             <a href ="DE.php?id=<?php echo $data['id']; ?>" class= "btn btn-success btn-sm text-white">Detail</a>
-                            <a href="UP.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>
+                            <a href="Ed.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm text-white">Edit</a>
                             <a href="Pr.php?id=<?php echo $data['id']; ?>" class="btn btn-primary btn-sm text-white">Cetak</a>
                             <a href="Dl.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Ini?')">Hapus</a>
                         </td>
