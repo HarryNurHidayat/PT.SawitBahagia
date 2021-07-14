@@ -13,4 +13,4 @@ $Masa = $_POST['jumlah_masa_kerja'];
 mysqli_query($koneksi, "insert into sawitb values('','$nama','$KTP','$Telp','$Tahun','$Masa')");
 
 // Mengembalikan ke halaman awal
-include("location:Sbahagia.php");
+header("location:Sbahagia.php");
